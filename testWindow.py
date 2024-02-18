@@ -1,4 +1,5 @@
-import tkinter as tk
+import tkinter as tk, tkinter.font as tk_font
+from tkinter.ttk import Combobox
 from tkinter import *
 
 windowWidth = 800
@@ -11,7 +12,12 @@ lbl = Label(window, text="This is a label with a great font.", fg="black", font=
 lbl.place(x=50, y=50)
 txtfld = Entry(window, bg="white", fg="black")
 txtfld.place(x=50, y=100)
+
+all_fonts = tk_font.families()
+cb = Combobox(window, values=all_fonts)
+cb.place(x=50, y=150)
 window.title("This is a test")
+
 # window.geometry("widthxheight+XPOS+YPOS") the size and position of the window
 window.geometry(f"{windowWidth}x{windowHeight}+10+10")
 window.mainloop()
