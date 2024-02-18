@@ -1,8 +1,13 @@
 import tkinter as tk
+from tkinter import *
 
-# window.geometry("widthxheight+XPOS+YPOS") the size and position of the window
+windowWidth = 800
+windowHeight = 500
 
 window = tk.Tk()
+btn = Button(window, text="This is a button", bg="red", fg="blue")
+btn.place(x=windowWidth/2, y=windowHeight/2)
 window.title("This is a test")
-window.geometry("800x500+10+10")
+# window.geometry("widthxheight+XPOS+YPOS") the size and position of the window
+window.geometry(f"{windowWidth}x{windowHeight}+10+10")
 window.mainloop()
